@@ -23,6 +23,7 @@ public class TitleMgr : MonoBehaviour {
         if (GUI.Button(new Rect(px, py, w, h), "START"))
         {
             //メインゲーム開始
+            UnitySystemConsoleRedirector.Redirect();
             Application.LoadLevel("Main");
 
 

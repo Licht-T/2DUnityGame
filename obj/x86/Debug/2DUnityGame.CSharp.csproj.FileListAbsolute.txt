@@ -1,0 +1,15 @@
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\Assembly-CSharp.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\Assembly-CSharp.pdb
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\FelicaLib.DotNet.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEditor.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.Networking.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.UI.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.xml
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.UI.xml
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEngine.Networking.xml
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\UnityEditor.xml
+C:\Users\Rito\Documents\GitHub\2DUnityGame\bin\x86\Debug\FelicaLib.DotNet.xml
+C:\Users\Rito\Documents\GitHub\2DUnityGame\obj\x86\Debug\2DUnityGame.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Rito\Documents\GitHub\2DUnityGame\obj\x86\Debug\Assembly-CSharp.dll
+C:\Users\Rito\Documents\GitHub\2DUnityGame\obj\x86\Debug\Assembly-CSharp.pdb

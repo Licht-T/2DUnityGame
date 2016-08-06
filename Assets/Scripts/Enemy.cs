@@ -51,7 +51,7 @@ public class Enemy : Token
 
         //破棄する
         DestroyObj();
+        NfcPcSc.NfcMain m = new NfcPcSc.NfcMain();
+        m.start();
     }
-
-
 }

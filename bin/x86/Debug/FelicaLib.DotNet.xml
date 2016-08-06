@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FelicaLib.DotNet</name>
+    </assembly>
+    <members>
+        <member name="T:FelicaLib.FelicaSystemCode">
+            <summary>
+            FeliCa のシステム コードを表します。
+            </summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Any">
+            <summary>すべて。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Common">
+            <summary>共通領域。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Cybernetics">
+            <summary>サイバネ領域。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Edy">
+            <summary>Edy。共通領域を使用します。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Waon">
+            <summary>WAON。共通領域を使用します。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.Suica">
+            <summary>Suica。サイバネ領域を使用します。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaSystemCode.QuicPay">
+            <summary>QUICPay。</summary>
+        </member>
+        <member name="T:FelicaLib.FelicaServiceCode">
+            <summary>
+            FeliCa のサービス コードを表します。
+            </summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.EdyBalance">
+            <summary>Edy の残高情報。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.EdyHistory">
+            <summary>Edy の履歴情報。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.WaonBalance">
+            <summary>WAON の残高情報。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.WaonHistory">
+            <summary>WAON の履歴情報。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.SuicaAttributes">
+            <summary>Suica の属性情報。</summary>
+        </member>
+        <member name="F:FelicaLib.FelicaServiceCode.SuicaHistory">
+            <summary>Suica の履歴情報。</summary>
+        </member>
+        <member name="T:FelicaLib.FelicaBlockItem">
+            <summary>
+            FeliCa のブロックを表すための基本クラスです。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.FelicaBlockItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.FelicaBlockItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.FelicaBlockItem.RawData">
+            <summary>元のバイナリ データを取得します。</summary>
+            <value>元のバイナリ データ。</value>
+        </member>
+        <member name="T:FelicaLib.EdyBalanceItem">
+            <summary>
+            Edy の残高情報を表します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.EdyBalanceItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.EdyBalanceItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.EdyBalanceItem.Balance">
+            <summary>残高を取得します。</summary>
+            <value>残高。</value>
+        </member>
+        <member name="T:FelicaLib.EdyHistoryItem">
+            <summary>
+            Edy の履歴情報を表します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.EdyHistoryItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.EdyHistoryItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.EdyHistoryItem.DateTime">
+            <summary>利用日時を取得します。</summary>
+            <value>利用日時。</value>
+        </member>
+        <member name="P:FelicaLib.EdyHistoryItem.UsageCode">
+            <summary>利用種別を取得します。</summary>
+            <value>利用種別。</value>
+        </member>
+        <member name="P:FelicaLib.EdyHistoryItem.TransactionId">
+            <summary>取引通番を取得します。</summary>
+            <value>取引通番。</value>
+        </member>
+        <member name="P:FelicaLib.EdyHistoryItem.Amount">
+            <summary>利用額を取得します。</summary>
+            <value>利用額。</value>
+        </member>
+        <member name="P:FelicaLib.EdyHistoryItem.Balance">
+            <summary>残高を取得します。</summary>
+            <value>残高。</value>
+        </member>
+        <member name="T:FelicaLib.WaonBalanceItem">
+            <summary>
+            WAON の残高情報を表します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.WaonBalanceItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.WaonBalanceItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.WaonBalanceItem.Balance">
+            <summary>残高を取得します。</summary>
+            <value>残高。</value>
+        </member>
+        <member name="T:FelicaLib.SuicaAttributesItem">
+            <summary>
+            Suica の属性情報を表します。
+            PASMO などの交通系 IC カードと互換性があります。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.SuicaAttributesItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.SuicaAttributesItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.SuicaAttributesItem.CardCode">
+            <summary>カード種別を取得します。</summary>
+            <value>カード種別。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaAttributesItem.AreaCode">
+            <summary>地域を取得します。</summary>
+            <value>地域。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaAttributesItem.Balance">
+            <summary>残高を取得します。</summary>
+            <value>残高。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaAttributesItem.TransactionId">
+            <summary>取引通番を取得します。</summary>
+            <value>取引通番。</value>
+        </member>
+        <member name="T:FelicaLib.SuicaHistoryItem">
+            <summary>
+            Suica の履歴情報を表します。
+            PASMO などの交通系 IC カードと互換性があります。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.SuicaHistoryItem.#ctor(System.Byte[])">
+            <summary>
+            <see cref="T:FelicaLib.SuicaHistoryItem"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="data">バイナリ データ。</param>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.DateTime">
+            <summary>利用日付を取得します。</summary>
+            <value>利用日付。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.DeviceCode">
+            <summary>機器種別を取得します。</summary>
+            <value>機器種別。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.UsageCode">
+            <summary>利用種別を取得します。</summary>
+            <value>利用種別。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.PaymentCode">
+            <summary>支払種別を取得します。</summary>
+            <value>支払種別。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.EntryCode">
+            <summary>入出場種別を取得します。</summary>
+            <value>入出場種別。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.Balance">
+            <summary>残高を取得します。</summary>
+            <value>残高。</value>
+        </member>
+        <member name="P:FelicaLib.SuicaHistoryItem.TransactionId">
+            <summary>取引通番を取得します。</summary>
+            <value>取引通番。</value>
+        </member>
+        <member name="T:FelicaLib.FelicaHelper">
+            <summary>
+            FeliCa に関するヘルパー メソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.GetEdyBalance">
+            <summary>
+            Edy の残高を取得します。
+            </summary>
+            <returns>Edy の残高。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.GetEdyHistory">
+            <summary>
+            Edy の利用履歴を取得します。
+            </summary>
+            <returns>Edy の利用履歴。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.GetWaonBalance">
+            <summary>
+            WAON の残高を取得します。
+            </summary>
+            <returns>WAON の残高。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.GetSuicaBalance">
+            <summary>
+            Suica の残高を取得します。
+            </summary>
+            <returns>Suica の残高。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.GetSuicaHistory">
+            <summary>
+            Suica の利用履歴を取得します。
+            </summary>
+            <returns>Suica の利用履歴。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.ToInt32(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列から指定した部分の要素を数値に変換します。
+            </summary>
+            <param name="data">バイト配列。</param>
+            <param name="start">開始インデックス。</param>
+            <param name="count">要素の数。</param>
+            <returns>数値。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.ToInt32(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            バイト配列から指定した部分の要素を数値に変換します。
+            </summary>
+            <param name="data">バイト配列。</param>
+            <param name="start">開始インデックス。</param>
+            <param name="count">要素の数。</param>
+            <param name="littleEndian">リトル エンディアンの場合は <see langword="true"/>。</param>
+            <returns>数値。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.ToHexString(System.Byte[])">
+            <summary>
+            バイト配列を 16 進数表記の文字列に変換します。
+            </summary>
+            <param name="data">バイト配列。</param>
+            <returns>16 進数表記の文字列。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaHelper.ToHexString(System.Byte[],System.Boolean)">
+            <summary>
+            バイト配列を 16 進数表記の文字列に変換します。
+            </summary>
+            <param name="data">バイト配列。</param>
+            <param name="lowercase">アルファベットを小文字で表記する場合は <see langword="true"/>。</param>
+            <returns>16 進数表記の文字列。</returns>
+        </member>
+        <member name="T:FelicaLib.NativeMethodsHelper">
+            <summary>
+            ネイティブ関数を .NET 向けに拡張します。
+            </summary>
+            <remarks>
+            http://msdn.microsoft.com/ja-jp/library/cc429019.aspx
+            </remarks>
+        </member>
+        <member name="M:FelicaLib.NativeMethodsHelper.LoadLibrary(System.String)">
+            <summary>
+            指定された実行可能モジュールを、呼び出し側プロセスのアドレス空間内にマップします。
+            </summary>
+            <param name="fileName">モジュールのファイル名。</param>
+            <returns>モジュールのハンドル。</returns>
+        </member>
+        <member name="M:FelicaLib.NativeMethodsHelper.FreeLibrary(System.IntPtr)">
+            <summary>
+            ロード済みの DLL モジュールの参照カウントを 1 つ減らします。
+            </summary>
+            <param name="module">DLL モジュールのハンドル。</param>
+        </member>
+        <member name="M:FelicaLib.NativeMethodsHelper.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            DLL が持つ、指定されたエクスポート済み関数のアドレスを取得します。
+            </summary>
+            <param name="module">DLL モジュールのハンドル。</param>
+            <param name="procName">関数名。</param>
+            <returns>DLL のエクスポート済み関数のアドレス。</returns>
+        </member>
+        <member name="M:FelicaLib.NativeMethodsHelper.GetDelegate``1(System.IntPtr,System.String)">
+            <summary>
+            DLL が持つ、指定されたエクスポート済み関数をデリゲートとして取得します。
+            </summary>
+            <typeparam name="TDelegate">デリゲートの型。</typeparam>
+            <param name="module">DLL モジュールのハンドル。</param>
+            <param name="procName">関数名。</param>
+            <returns>デリゲート。</returns>
+        </member>
+        <member name="T:FelicaLib.Felica">
+            <summary>
+            FeliCa を通じて IC カードからデータを読み取るためのクラスを表します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.Felica.#ctor(System.Int32)">
+            <summary>
+            <see cref="T:FelicaLib.Felica"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+        </member>
+        <member name="M:FelicaLib.Felica.Finalize">
+            <summary>
+            オブジェクトを破棄します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.Felica.Dispose">
+            <summary>
+            このオブジェクトで使用されているすべてのリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.Felica.Dispose(System.Boolean)">
+            <summary>
+            このオブジェクトで使用されているリソースを解放します。
+            </summary>
+            <param name="disposing">すべてのリソースを解放する場合は <see langword="true"/>。アンマネージ リソースのみを解放する場合は <see langword="false"/>。</param>
+        </member>
+        <member name="M:FelicaLib.Felica.TryConnectionToPort">
+            <summary>
+            FeliCa ポートに接続できるかどうかを確認します。
+            </summary>
+            <returns>FeliCa ポートに接続できる場合は <see langword="true"/>。</returns>
+        </member>
+        <member name="M:FelicaLib.Felica.TryConnectionToCard">
+            <summary>
+            IC カードに接続できるかどうかを確認します。
+            </summary>
+            <returns>IC カードに接続できる場合は <see langword="true"/>。</returns>
+        </member>
+        <member name="M:FelicaLib.Felica.GetIDm">
+            <summary>
+            製造 ID (IDm) を取得します。
+            </summary>
+            <returns>製造 ID (IDm)。配列の長さは 8 です。</returns>
+        </member>
+        <member name="M:FelicaLib.Felica.GetPMm">
+            <summary>
+            製造パラメータ (PMm) を取得します。
+            </summary>
+            <returns>製造パラメータ (PMm)。配列の長さは 8 です。</returns>
+        </member>
+        <member name="M:FelicaLib.Felica.ReadWithoutEncryption(System.Int32,System.Int32)">
+            <summary>
+            非暗号化領域の 1 つのブロックのデータを読み込みます。
+            </summary>
+            <param name="serviceCode">サービス コード。</param>
+            <param name="address">アドレス。</param>
+            <returns>非暗号化領域のブロックのデータ。配列の長さは 16 です。</returns>
+        </member>
+        <member name="M:FelicaLib.Felica.ReadBlocksWithoutEncryption(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            非暗号化領域の連続した複数のブロックのデータを読み込みます。
+            </summary>
+            <param name="serviceCode">サービス コード。</param>
+            <param name="addressStart">読み込むブロックの最初のアドレス。</param>
+            <param name="addressCount">読み込むブロックの数。</param>
+            <returns>非暗号化領域のブロックのデータのシーケンス。</returns>
+        </member>
+        <member name="P:FelicaLib.Felica.SystemCode">
+            <summary>
+            システム コードを取得します。
+            </summary>
+            <value>システム コード。</value>
+        </member>
+        <member name="T:FelicaLib.FelicaUtility">
+            <summary>
+            FeliCa を通じて IC カードからデータを読み取るための静的メソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.TryConnectionToPort">
+            <summary>
+            FeliCa ポートに接続できるかどうかを確認します。
+            </summary>
+            <returns>FeliCa ポートに接続できる場合は <see langword="true"/>。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.TryConnectionToCard(System.Int32)">
+            <summary>
+            IC カードに接続できるかどうかを確認します。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+            <returns>IC カードに接続できる場合は <see langword="true"/>。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.GetIDm(System.Int32)">
+            <summary>
+            製造 ID (IDm) を取得します。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+            <returns>製造 ID (IDm)。配列の長さは 8 です。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.GetPMm(System.Int32)">
+            <summary>
+            製造パラメータ (PMm) を取得します。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+            <returns>製造パラメータ (PMm)。配列の長さは 8 です。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.ReadWithoutEncryption(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            非暗号化領域の 1 つのブロックのデータを読み込みます。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+            <param name="serviceCode">サービス コード。</param>
+            <param name="address">アドレス。</param>
+            <returns>非暗号化領域のブロックのデータ。配列の長さは 16 です。</returns>
+        </member>
+        <member name="M:FelicaLib.FelicaUtility.ReadBlocksWithoutEncryption(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            非暗号化領域の連続した複数のブロックのデータを読み込みます。
+            </summary>
+            <param name="systemCode">システム コード。</param>
+            <param name="serviceCode">サービス コード。</param>
+            <param name="addressStart">読み込むブロックの最初のアドレス。</param>
+            <param name="addressCount">読み込むブロックの数。</param>
+            <returns>非暗号化領域のブロックのデータのシーケンス。</returns>
+        </member>
+    </members>
+</doc>
