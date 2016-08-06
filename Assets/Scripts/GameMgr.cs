@@ -31,6 +31,6 @@ public class GameMgr : MonoBehaviour {
                 Application.LoadLevel("Title");
             }       
                     
-                    }
+        }
     }
 }

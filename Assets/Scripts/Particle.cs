@@ -8,6 +8,7 @@ public class Particle : Token
     //パーティクルの生成
     public static Particle Add(float x, float y)
     {
+        UnitySystemConsoleRedirector.Redirect();
         //プレハブを取得
         _prefab = GetPrefab(_prefab, "Particle");
         //プレハブからインスタンスを生成
